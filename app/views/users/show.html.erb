@@ -1,0 +1,7 @@
+<h1>User details are</h1>
+
+<p> <strong>Name: </strong> <%= @user.name %> </p>
+<p> <strong>Email: </strong> <%= @user.email %> </p>
+<p> <strong>Phone_no: </strong> <%= @user.phone_no %> </p>
+
+<%= link_to "Sign out", signout_path, method: :delete, class: "btn btn-primary" %>
