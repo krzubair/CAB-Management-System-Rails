@@ -1,3 +1,4 @@
+
 class JourneysController < ApplicationController
 
     def index
@@ -16,12 +17,19 @@ class JourneysController < ApplicationController
 
         if @journey_detail.save! 
             flash[:success] = "Journey has been created"
-            redirect_to journeys_path    
+            redirect_to journey_path(@journey_detail)    
         else 
             flash[:alert] = "something went wring"
             render :new
         end
     end
+
+    def show
+        @journey_detail = JourneyDetail.find(params[:id])
+    end
+
+    
+      
 
     private
 

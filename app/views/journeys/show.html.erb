@@ -1,0 +1,14 @@
+<h1>Journey Details</h1>
+
+<p><strong>Start Location:</strong> <%= @journey_detail.start_loc %></p>
+<p><strong>End Location:</strong> <%= @journey_detail.end_loc %></p>
+<p><strong>Date of Journey:</strong> <%= @journey_detail.date_of_journey %></p>
+<p><strong>Start Time:</strong> <%= @journey_detail.start_time %></p>
+<p><strong>End Time:</strong> <%= @journey_detail.end_time %></p>
+<!-- Add more journey details as needed -->
+
+
+<h2>Driver Details</h2>
+<p><strong>driver_id:</strong> <%= @journey_detail.driver_id %></p>
+
+<%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %>

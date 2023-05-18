@@ -2,6 +2,7 @@ class JourneyDetail < ApplicationRecord
     has_one :bill_detail
     has_many :passngrs
     has_many :fdbks
+    
 
     validates :date_of_journey, presence: true
     validates :start_time, presence: true
