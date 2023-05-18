@@ -9,7 +9,10 @@ Rails.application.routes.draw do
 
  get 'signin', to: 'sessions#new'
  post 'signin', to: 'sessions#create'
- delete 'signout', to: 'sessions#destroy'
+
+ delete '/signout', to: 'sessions#destroy', as: 'signout'
+
+#  delete 'signout', to: 'sessions#destroy'
 
   # post "/journeys/new" => "journeys#create", :as => :create_journey
   
