@@ -5,4 +5,6 @@ class Driver < ApplicationRecord
     validates :age, presence:true, numericality: { greater_than_or_equal_to: 18 }
     validates :dl_no, presence:true
 
+    
+
 end

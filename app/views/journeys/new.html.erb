@@ -36,9 +36,13 @@
     <%= form.number_field :no_of_passngr %>
   </div>
 
-  <div>
+  <%# <div> %>
+    <%# <%= form.label :driver_id %> 
+    <%# <%= form.collection_select :driver_id, Driver.all, :id, :name, { prompt: 'Select Driver' } %> 
+  <%# </div> %>
+  <div class="field">
     <%= form.label :driver_id %>
-    <%= form.collection_select :driver_id, Driver.all, :id, :name, { prompt: 'Select Driver' } %>
+    <%= form.collection_select :driver_id, @active_drivers, :id, :name %>
   </div>
 
   <div >

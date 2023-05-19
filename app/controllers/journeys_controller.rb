@@ -8,6 +8,7 @@ class JourneysController < ApplicationController
 
     def new
         @journey_detail = JourneyDetail.new
+        @active_drivers = Driver.where(active: true)
     end
 
     def create
