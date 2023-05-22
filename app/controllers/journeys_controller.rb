@@ -29,6 +29,15 @@ class JourneysController < ApplicationController
         @journey_detail = JourneyDetail.find(params[:id])
     end
 
+    def complete
+        @journey_detail = JourneyDetail.find(params[:id])
+        @journey_detail.update(completed: true)
+        @driver = Driver.find(@journey_detail.driver_id)
+
+        @driver.update(active: true)
+
+        redirect_to journeys_path(@journey_detail), notice: 'Journey completed successfully.'
+      end
     
       
 

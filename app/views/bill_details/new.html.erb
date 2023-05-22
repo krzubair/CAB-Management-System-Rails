@@ -1,0 +1,24 @@
+<h1>New Bill Detail</h1>
+
+<%= form_with(model: @bill_detail, url: journey_bill_details_path(@journey_detail), local: true) do |form| %>
+  <% if @bill_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bill_detail.errors.count, "error") %> prohibited this bill detail from being saved:</h2>
+
+      <ul>
+        <% @bill_detail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :bill_date %>
+    <%= form.date_field :bill_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Generate Bill", class: "btn btn-primary" %>
+  </div>
+<% end %>

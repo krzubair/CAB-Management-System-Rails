@@ -1,0 +1,8 @@
+<!-- show.html.erb -->
+
+<h1>Bill Detail</h1>
+
+<p><strong>Bill Date:</strong> <%= @bill_detail.bill_date %></p>
+<p><strong>Total Amount:</strong> <%= @bill_detail.total_amt %></p>
+
+<%= link_to 'Back to Journey', journey_path(@bill_detail.journey_detail) %>

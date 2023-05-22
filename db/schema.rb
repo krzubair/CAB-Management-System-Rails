@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_19_065153) do
+ActiveRecord::Schema.define(version: 2023_05_20_072104) do
 
   create_table "bill_details", force: :cascade do |t|
     t.date "bill_date"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2023_05_19_065153) do
     t.integer "taxi_detail_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "completed", default: false
     t.index ["driver_id"], name: "index_journey_details_on_driver_id"
     t.index ["taxi_detail_id"], name: "index_journey_details_on_taxi_detail_id"
   end

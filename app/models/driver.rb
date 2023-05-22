@@ -1,4 +1,6 @@
 class Driver < ApplicationRecord
+    has_one :journey_detail
+    
     validates :name, presence: true, length: { minimum: 3 }
     validates :gender, presence: true
     validates :phone_no, presence:true, length: { minimum: 10}

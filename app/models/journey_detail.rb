@@ -3,6 +3,11 @@ class JourneyDetail < ApplicationRecord
     has_many :passngrs
     has_many :fdbks
     
+    belongs_to :driver
+
+    after_save :deactivate_driver, if: :completed?
+
+   
 
     validates :date_of_journey, presence: true
     validates :start_time, presence: true
@@ -11,4 +16,13 @@ class JourneyDetail < ApplicationRecord
     validates :adv_amt, presence: true
     validates :no_of_passngr, presence: true
 
+    private
+  
+    def deactivate_driver
+      driver.update(active: false)
+    end
+
+    def completed?
+      end_time.present? && Time.now >= end_time
+    end
 end
