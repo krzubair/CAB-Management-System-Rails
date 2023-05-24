@@ -35,8 +35,10 @@ class JourneysController < ApplicationController
         @driver = Driver.find(@journey_detail.driver_id)
 
         @driver.update(active: true)
+        flash[:alert] = "journey is completed successfully"
+        redirect_to journey_path(@journey_detail)     
 
-        redirect_to journeys_path(@journey_detail), notice: 'Journey completed successfully.'
+        # redirect_to journeys_path(@journey_detail), notice: 'Journey completed successfully.'
       end
     
       

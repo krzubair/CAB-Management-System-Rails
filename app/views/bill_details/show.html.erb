@@ -2,7 +2,10 @@
 
 <h1>Bill Detail</h1>
 
-<p><strong>Bill Date:</strong> <%= @bill_detail.bill_date %></p>
-<p><strong>Total Amount:</strong> <%= @bill_detail.total_amt %></p>
+<p><strong>Bill Date: </strong> <%= @bill_detail.bill_date %></p>
+<p><strong>Total Charge of Ride: </strong> <%= @bill_detail.total_amt %></p>
+<p><strong>advance Amount which is already paid: </strong><%=@journey_detail.adv_amt%></p>
+<p><strong>Amount that is remaining to pay: </strong><%= @bill_detail.total_amt - @journey_detail.adv_amt %></p>
 
 <%= link_to 'Back to Journey', journey_path(@bill_detail.journey_detail) %>
+<%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %>
