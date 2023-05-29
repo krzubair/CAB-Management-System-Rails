@@ -40,7 +40,7 @@ class BillDetailsController < ApplicationController
     # Example calculation:
     time_diff = @journey_detail.end_time - @journey_detail.start_time
     # distance = calculate_distance_between_locations(@journey_detail.start_loc, @journey_detail.end_loc)
-    @bill_detail.total_amt = time_diff * 10 + @journey_detail.adv_amt 
+    @bill_detail.total_amt = time_diff.abs/10  + @journey_detail.adv_amt 
     
      
   end

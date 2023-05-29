@@ -1,57 +1,60 @@
-<h1>Create Journey</h1>
+<div class="container">
+  <h1>Hi <%= current_user.name %>, Create your Journey</h1>
 
-<%= form_with(model: @journey_detail, url: journeys_path) do |form| %>
-  <div >
-    <%= form.label :date_of_journey %>
-    <%= form.date_field :date_of_journey %>
-  </div>
+  <%= form_with(model: @journey_detail, url: journeys_path, class: 'journey-form') do |form| %>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :date_of_journey %>
+          <%= form.date_field :date_of_journey, class: 'form-control' %>
+        </div>
 
-  <div >
-    <%= form.label :start_time %>
-    <%= form.text_field :start_time %>
-  </div>
+        <div class="form-group">
+          <%= form.label :start_time %>
+          <%= form.text_field :start_time, class: 'form-control' %>
+        </div>
 
-  <div >
-    <%= form.label :end_time %>
-    <%= form.text_field :end_time %>
-  </div>
+        <div class="form-group">
+          <%= form.label :end_time %>
+          <%= form.text_field :end_time, class: 'form-control' %>
+        </div>
 
-  <div >
-    <%= form.label :start_loc %>
-    <%= form.text_field :start_loc %>
-  </div>
+        <div class="form-group">
+          <%= form.label :start_loc %>
+          <%= form.text_field :start_loc, class: 'form-control' %>
+        </div>
 
-  <div >
-    <%= form.label :end_loc %>
-    <%= form.text_field :end_loc %>
-  </div>
+        <div class="form-group">
+          <%= form.label :end_loc %>
+          <%= form.text_field :end_loc, class: 'form-control' %>
+        </div>
+      </div>
 
-  <div>
-    <%= form.label :adv_amt %>
-    <%= form.text_field :adv_amt%>
-  </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <%= form.label :adv_amt %>
+          <%= form.text_field :adv_amt, class: 'form-control' %>
+        </div>
 
-  <div>
-    <%= form.label :no_of_passngr %>
-    <%= form.number_field :no_of_passngr %>
-  </div>
+        <div class="form-group">
+          <%= form.label :no_of_passngr %>
+          <%= form.number_field :no_of_passngr, class: 'form-control' %>
+        </div>
 
-  <%# <div> %>
-    <%# <%= form.label :driver_id %> 
-    <%# <%= form.collection_select :driver_id, Driver.all, :id, :name, { prompt: 'Select Driver' } %> 
-  <%# </div> %>
-  <div class="field">
-    <%= form.label :driver_id %>
-    <%= form.collection_select :driver_id, @active_drivers, :id, :name %>
-  </div>
+        <div class="form-group">
+          <%= form.label :driver_id %>
+          <%= form.collection_select :driver_id, @active_drivers, :id, :name, { prompt: 'Select Driver' }, class: 'form-control' %>
+        </div>
 
-  <div >
-    <%= form.label :taxi_detail_id %>
-    <%= form.collection_select :taxi_detail_id, TaxiDetail.all, :id, :taxi_type, { prompt: 'Select Taxi' } %>
-  </div>
+        <div class="form-group">
+          <%= form.label :taxi_detail_id %>
+          <%= form.collection_select :taxi_detail_id, TaxiDetail.all, :id, :taxi_type, { prompt: 'Select Taxi' }, class: 'form-control' %>
+        </div>
+      </div>
+    </div>
 
-  <div >
-    <%= form.submit 'Create' %>
-
-  </div>
-<% end %>
+    <div class="actions">
+      <%= form.submit 'Create', class: 'btn btn-primary' %>
+    </div>
+  <% end %>
+</div>
