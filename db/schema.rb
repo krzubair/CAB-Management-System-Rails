@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_20_072104) do
+ActiveRecord::Schema.define(version: 2023_05_30_095010) do
 
   create_table "bill_details", force: :cascade do |t|
     t.date "bill_date"
@@ -29,7 +29,8 @@ ActiveRecord::Schema.define(version: 2023_05_20_072104) do
     t.text "dl_no"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "active"
+    t.boolean "active", default: true
+    t.string "password_digest"
   end
 
   create_table "fdbks", force: :cascade do |t|

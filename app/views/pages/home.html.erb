@@ -3,13 +3,18 @@
     <div class="col-md-6 text-center">
       <h1>Welcome to the Cab Management System</h1>
       <hr class="my-4">
+
+      <h2> Are you User ? </h2>
+
+      <hr class="my-4">
       <div class="card bg-primary text-white mb-4">
         <div class="card-body">
-          <h2 class="card-title">Sign Up</h2>
+          <h2 class="card-title"> Sign Up</h2>
           <p class="card-text">Create an account to get started.</p>
           <%= link_to "Sign up", new_user_path, class: "btn btn-light btn-lg" %>
         </div>
       </div>
+
       <div class="card bg-secondary text-white">
         <div class="card-body">
           <h2 class="card-title">Sign In</h2>
@@ -17,6 +22,41 @@
           <%= link_to "Sign in", signin_path, class: "btn btn-light btn-lg" %>
         </div>
       </div>
+
+      
+
+      
+
+
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row justify-content-center align-items-center vh-100">
+    <div class="col-md-6 text-center">
+      <%# <h1>Welcome to the Cab Management System</h1> %>
+
+     
+      <h2> Are you Driver ? </h2>
+
+      <hr class="my-4">
+      
+      <div class="card bg-primary text-white mb-4">
+        <div class="card-body">
+          <h2 class="card-title"> Sign Up</h2>
+          <p class="card-text">Create an account to get started.</p>
+          <%= link_to "Sign up", new_driver_path, class: "btn btn-light btn-lg" %> 
+        </div>
+      </div>
+      <div class="card bg-secondary text-white">
+        <div class="card-body">
+          <h2 class="card-title">Sign In</h2>
+          <p class="card-text">Already have an account? Sign in here.</p>
+          <%= link_to "Sign in", login_path, class: "btn btn-light btn-lg" %>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </div>

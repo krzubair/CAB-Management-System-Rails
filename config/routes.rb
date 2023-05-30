@@ -17,13 +17,19 @@ Rails.application.routes.draw do
       post 'complete'
     end
   end
+
+resources :drivers
+get 'login', to: 'drivers_sessions#new'
+post 'login', to: 'drivers_sessions#create'
+
+delete 'logout', to: 'drivers_sessions#destroy', as: 'logout'
   
-resources  :users
+resources  :users 
 
- get 'signin', to: 'sessions#new'
- post 'signin', to: 'sessions#create'
+get 'signin', to: 'sessions#new'
+post 'signin', to: 'sessions#create'
 
- delete '/signout', to: 'sessions#destroy', as: 'signout'
+delete '/signout', to: 'sessions#destroy', as: 'signout'
 
 #  delete 'signout', to: 'sessions#destroy'
 

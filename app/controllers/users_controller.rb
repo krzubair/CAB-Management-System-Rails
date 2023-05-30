@@ -33,7 +33,8 @@ class UsersController < ApplicationController
         if @user.update(user_params)
             flash[:success] = "User updated Successfully"
             redirect_to user_path(@user)
-        else    
+        else 
+            flash.now[:alert] = "enter valid details"   
             render :edit
         end
     end

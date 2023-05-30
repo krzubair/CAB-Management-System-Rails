@@ -1,5 +1,7 @@
 class Driver < ApplicationRecord
     has_one :journey_detail
+
+    has_secure_password
     
     validates :name, presence: true, length: { minimum: 3 }
     validates :gender, presence: true
