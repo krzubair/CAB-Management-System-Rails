@@ -18,7 +18,7 @@ Rails.application.routes.draw do
     end
   end
   
-  resources  :users
+resources  :users
 
  get 'signin', to: 'sessions#new'
  post 'signin', to: 'sessions#create'

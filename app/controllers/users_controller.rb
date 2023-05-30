@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    before_action :set_user, only: [:show]
+    before_action :set_user, only: [:show, :edit, :update]
     
     def index
         @user = User.all
@@ -23,6 +23,19 @@ class UsersController < ApplicationController
 
     def show
         # @user = User.find(params[:id])
+    end
+
+    def edit
+
+    end
+
+    def update 
+        if @user.update(user_params)
+            flash[:success] = "User updated Successfully"
+            redirect_to user_path(@user)
+        else    
+            render :edit
+        end
     end
       
     private
