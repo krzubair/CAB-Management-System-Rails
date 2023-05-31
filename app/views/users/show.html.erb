@@ -4,7 +4,7 @@
 <p> <strong>Email: </strong> <%= @user.email %> </p>
 <p> <strong>Phone_no: </strong> <%= @user.phone_no %> </p>
 
-<%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %>
+<%= link_to "Sign out", signout_path,class: "btn btn-primary" %>
 
 
 <%= link_to "Book the Journey",new_journey_path,class: "btn btn-primary" %>

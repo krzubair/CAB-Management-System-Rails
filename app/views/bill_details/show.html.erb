@@ -8,4 +8,4 @@
 <p><strong>Amount that is remaining to pay: </strong><%= @bill_detail.total_amt - @journey_detail.adv_amt %></p>
 
 <%= link_to 'Back to Journey', journey_path(@bill_detail.journey_detail) %>
-<%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %>
+<%# <%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %> 

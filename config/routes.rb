@@ -29,7 +29,7 @@ resources  :users
 get 'signin', to: 'sessions#new'
 post 'signin', to: 'sessions#create'
 
-delete '/signout', to: 'sessions#destroy', as: 'signout'
+get '/signout', to: 'sessions#destroy'
 
 #  delete 'signout', to: 'sessions#destroy'
 

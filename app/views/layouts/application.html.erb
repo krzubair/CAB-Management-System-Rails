@@ -8,12 +8,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'users', media: 'all'%>
-    <%= render 'shared/user_info'%>
+    
     
     
   </head>
 
   <body>
+
+  <%= render partial: 'shared/navbar'%>
+  <%= render 'shared/user_info'%>
   <p class = "notice"><%= notice %></p>
   <p class = "alert"><%= alert %></p>
   <p></p>

@@ -11,7 +11,7 @@
 <h2>Driver Details</h2>
 <p><strong>driver_id:</strong> <%= @journey_detail.driver_id %></p>
 
-<%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %>
+
 
 <%= button_to 'Complete Journey', complete_journey_path(@journey_detail), method: :post, class: 'btn btn-primary' %>
 
