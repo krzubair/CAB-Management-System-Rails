@@ -1,18 +1,23 @@
-<h1>Journey Details</h1>
+<div class="journey-details">
 
-<p><strong>Start Location:</strong> <%= @journey_detail.start_loc %></p>
-<p><strong>End Location:</strong> <%= @journey_detail.end_loc %></p>
-<p><strong>Date of Journey:</strong> <%= @journey_detail.date_of_journey %></p>
-<p><strong>Start Time:</strong> <%= @journey_detail.start_time %></p>
-<p><strong>End Time:</strong> <%= @journey_detail.end_time %></p>
-<!-- Add more journey details as needed -->
+  <div class="journey-info">
+  <h1>Journey Details</h1>
+    <p><strong>Start Location:</strong> <%= @journey_detail.start_loc %></p>
+    <p><strong>End Location:</strong> <%= @journey_detail.end_loc %></p>
+    <p><strong>Date of Journey:</strong> <%= @journey_detail.date_of_journey %></p>
+    <p><strong>Start Time:</strong> <%= @journey_detail.start_time %></p>
+    <p><strong>End Time:</strong> <%= @journey_detail.end_time %></p>
+    
+    <!-- Add more journey details as needed -->
+    
+    <h2>Driver Details</h2>
+    
+    <p><strong>Driver ID:</strong> <%= @journey_detail.driver_id %></p>
+  </div>
 
+  <div class="button-container">  
+    <%= button_to 'Complete Journey', complete_journey_path(@journey_detail), method: :post, class: 'btn btn-primary' %>
 
-<h2>Driver Details</h2>
-<p><strong>driver_id:</strong> <%= @journey_detail.driver_id %></p>
-
-
-
-<%= button_to 'Complete Journey', complete_journey_path(@journey_detail), method: :post, class: 'btn btn-primary' %>
-
-<%= button_to 'Generate Bill', new_journey_bill_detail_path(@journey_detail.id), method: :post, class: 'btn btn-primary' %>
+    <%= button_to 'Generate Bill', new_journey_bill_detail_path(@journey_detail.id), method: :post, class: 'btn btn-primary' %>
+  </div>
+</div>

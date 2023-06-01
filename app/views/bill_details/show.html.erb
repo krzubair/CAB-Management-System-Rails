@@ -1,11 +1,20 @@
 <!-- show.html.erb -->
+<div class="bill-detail">
 
-<h1>Bill Detail</h1>
+   
 
-<p><strong>Bill Date: </strong> <%= @bill_detail.bill_date %></p>
-<p><strong>Total Charge of Ride: </strong> <%= @bill_detail.total_amt %></p>
-<p><strong>advance Amount which is already paid: </strong><%=@journey_detail.adv_amt%></p>
-<p><strong>Amount that is remaining to pay: </strong><%= @bill_detail.total_amt - @journey_detail.adv_amt %></p>
+    <div class="bill-info">
+        <h1>Bill Detail</h1>
+        <p><strong>Bill Date: </strong> <%= @bill_detail.bill_date %></p>
+        <p><strong>Total Charge of Ride: </strong> <%= @bill_detail.total_amt %></p>
+        <p><strong>advance Amount which is already paid: </strong><%=@journey_detail.adv_amt%></p>
+        <p><strong>Amount that is remaining to pay: </strong><%= @bill_detail.total_amt - @journey_detail.adv_amt %></p>
+            <div class="btn">
+         <%= link_to 'Back to Journey', journey_path(@bill_detail.journey_detail) %>
+    </div>
+    </div>
+   
 
-<%= link_to 'Back to Journey', journey_path(@bill_detail.journey_detail) %>
+</div>
+
 <%# <%= button_to "Sign out", signout_path, method: :delete,class: "btn btn-primary" %> 

@@ -14,3 +14,24 @@
  *= require_self
  */
  @import 'bootstrap';
+
+ /* Set the background image */
+body {
+    background-image: url("/assets/background-image.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #f0f0f081;
+  }
+  
+.container{
+  background-repeat: no-repeat;
+  background-color: #f0f0f0cb;
+}  
+
+.navbar-nav .nav-item .nav-link:hover {
+  background-color: rgba(243, 178, 92, 0.76);
+  color: black;
+  transition: background-color 0.3s ease;
+}

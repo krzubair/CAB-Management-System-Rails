@@ -1,3 +1,43 @@
 // Place all the styles related to the Journeys controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.journey-details {
+    margin-top: 20px;
+    padding: 20px;
+    background-color:  rgba(226, 228, 134, 0.856);
+  }
+  
+  .journey-details h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .journey-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .journey-info p {
+    margin: 5px 0;
+  }
+  
+  .journey-info h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    margin-bottom: 20px;
+
+   
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-container .btn {
+    margin-right: 10px;
+  }
+  
