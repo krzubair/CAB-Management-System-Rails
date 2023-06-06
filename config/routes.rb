@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :journeys do
     # ...
     resources :bill_details, only: [:new, :create, :show]
+    resources :fdbks, only: [:new, :create, :show]
     
     member do
       post 'complete'
@@ -30,6 +31,8 @@ get 'signin', to: 'sessions#new'
 post 'signin', to: 'sessions#create'
 
 get '/signout', to: 'sessions#destroy'
+
+
 
 #  delete 'signout', to: 'sessions#destroy'
 

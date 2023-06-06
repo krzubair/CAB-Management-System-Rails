@@ -19,5 +19,7 @@
     <%= button_to 'Complete Journey', complete_journey_path(@journey_detail), method: :post, class: 'btn btn-primary' %>
 
     <%= button_to 'Generate Bill', new_journey_bill_detail_path(@journey_detail.id), method: :post, class: 'btn btn-primary' %>
+
+   <%= button_to 'Feedback', new_journey_fdbk_path(@journey_detail.id), method: :get, class: 'btn btn-primary' %>
   </div>
 </div>

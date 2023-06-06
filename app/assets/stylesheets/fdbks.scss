@@ -1,0 +1,47 @@
+// Place all the styles related to the Fdbks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.form-group
+{
+    background-color:  rgba(226, 228, 134, 0.856);
+}
+
+.form-group textarea {
+    background-color: rgba(226, 228, 134, 0.856);
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+  }
+
+  .fdbk-detail{
+    margin-top: 10px;
+    justify-content: center;
+
+}
+.fdbk-info h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+    color: black;
+}
+
+
+.fdbk-info {
+    background-color: rgba(243, 211, 105, 0.712);
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.btn a{
+    color: black
+}
+
+.btn a:hover{
+    color: white;
+}
+  
+  

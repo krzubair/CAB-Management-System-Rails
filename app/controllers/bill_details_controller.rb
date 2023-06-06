@@ -12,12 +12,12 @@ class BillDetailsController < ApplicationController
     @bill_detail.journey_detail = @journey_detail
     calculate_bill_amount
 
-    if @bill_detail.save!
+    if @bill_detail.save
       flash[:success] = "Bill Detail created successfully."
       redirect_to journey_bill_detail_path(journey_id: @journey_detail.id, id: @bill_detail.id)
 
     else
-      render :new
+      render 'new'
     end
   end
 

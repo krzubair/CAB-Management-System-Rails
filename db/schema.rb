@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_05_30_095010) do
+ActiveRecord::Schema.define(version: 2023_06_06_092424) do
 
   create_table "bill_details", force: :cascade do |t|
     t.date "bill_date"
@@ -36,12 +36,10 @@ ActiveRecord::Schema.define(version: 2023_05_30_095010) do
   create_table "fdbks", force: :cascade do |t|
     t.text "description"
     t.string "email"
-    t.integer "passngr_id", null: false
     t.integer "journey_detail_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["journey_detail_id"], name: "index_fdbks_on_journey_detail_id"
-    t.index ["passngr_id"], name: "index_fdbks_on_passngr_id"
   end
 
   create_table "journey_details", force: :cascade do |t|
@@ -100,7 +98,6 @@ ActiveRecord::Schema.define(version: 2023_05_30_095010) do
 
   add_foreign_key "bill_details", "journey_details"
   add_foreign_key "fdbks", "journey_details"
-  add_foreign_key "fdbks", "passngrs"
   add_foreign_key "journey_details", "drivers"
   add_foreign_key "journey_details", "taxi_details"
   add_foreign_key "passngrs", "journey_details"

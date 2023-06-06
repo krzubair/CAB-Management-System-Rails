@@ -1,0 +1,16 @@
+<div class="fdbk-detail">
+
+   
+
+    <div class="fdbk-info">
+        <h1>Feedback-Details</h1>
+        <p><strong>Description: </strong> <%= @fdbk.description %></p>
+        <p><strong>Email of User: </strong> <%= @fdbk.email %></p>
+        <p><strong>journey_detail_id: </strong><%=@journey_detail.id%></p>
+       
+         <%= link_to 'Back to Journey', journey_path(@fdbk.journey_detail), class: "btn btn-primary" %>
+    </div>
+    </div>
+   
+
+</div>
