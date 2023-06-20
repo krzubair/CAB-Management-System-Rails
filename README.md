@@ -8,9 +8,9 @@ The CAB Management System is a web application that allows users to book cab jou
 
 - User authentication: Users can sign up, log in, and log out.
 - Journey booking: Users can book cab journeys by providing start and end locations, date, and time.
-- Driver management: Admin users can add, edit, and delete drivers.
+- Driver management: Drivers can register themselves and after then login to find  a ride. 
 - Feedback system: Users can provide feedback on their cab journeys.
-- Bill generation: Admin users can generate bills for completed journeys.
+- Bill generation: users can generate bills for completed journeys.
 
 # Dependencies
 
