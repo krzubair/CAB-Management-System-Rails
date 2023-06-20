@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# ABOUT CAB Management System
 
-Things you may want to cover:
+The CAB Management System is a web application that allows users to book cab journeys, manage drivers, and provide feedback on their experiences.
 
-* Ruby version
+## Features
 
-* System dependencies
+- User authentication: Users can sign up, log in, and log out.
+- Journey booking: Users can book cab journeys by providing start and end locations, date, and time.
+- Driver management: Admin users can add, edit, and delete drivers.
+- Feedback system: Users can provide feedback on their cab journeys.
+- Bill generation: Admin users can generate bills for completed journeys.
 
-* Configuration
+# Dependencies
 
-* Database creation
+- Ruby version - 2.7.3p183
+- Rails version - 6.0.6.1
 
-* Database initialization
+- Uses Bcrypt for authentication v3.1.7
 
-* How to run the test suite
+- Database Used - sqlite3 version 1.4
 
-* Services (job queues, cache servers, search engines, etc.)
+- Bootstrap Version - 5.2.3
 
-* Deployment instructions
+# Deployment instructions
 
-* ...
+- git clone git_link
+- bundle_install
+- rails db:migrate
+- rails db:seed
+- rails s
